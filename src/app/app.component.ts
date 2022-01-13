@@ -9,8 +9,13 @@ export class AppComponent {
   newMemberName = "";
   members: string[] = [];
 
+  onInput(member: string) {
+    this.newMemberName = member;
+    console.log(this.newMemberName)
+  }
   addMember() {
-    console.log('Hello')
+    this.members.push(this.newMemberName)
+    console.log(this.members) 
   }
 }
 
