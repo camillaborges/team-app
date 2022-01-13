@@ -10,10 +10,12 @@
       #addMemberInput 
       type="text" 
       placeholder="Name"
-      (input)="onInput(addMemberInput.value)" 
+      (input)="onInput(addMemberInput.value)"
+      [value]="newMemberName" 
       />
       <div class="center">
         <button (click)=addMember()>Add</button>
+        <button (click)=clearMembers()>Clear</button>
       </div>
     </div>
 

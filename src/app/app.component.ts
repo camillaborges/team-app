@@ -14,8 +14,13 @@ export class AppComponent {
     console.log(this.newMemberName)
   }
   addMember() {
-    this.members.push(this.newMemberName)
+    this.members.push(this.newMemberName);
+    this.newMemberName = " ";
     console.log(this.members) 
+  }
+
+  clearMembers() {
+    this.members = []
   }
 }
 
