@@ -26,8 +26,11 @@
       placeholder="# number of teams" 
       maxlength="2"
       (input)="onNumberOfTeamsInput(numberOfTeamsInput.value)"
-      [value]="numberOfTeams" />
-      <button>Generate</button>
+      [value]="numberOfTeams" 
+      />
+      
+      <button
+      (click)=generateTeams()>Generate</button>
     </div>
     
     <p *ngIf="errorMessage" class="error-msg"> {{ errorMessage }}</p>
