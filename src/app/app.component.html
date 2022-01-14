@@ -6,12 +6,12 @@
     </ul>
   
     <div class="add-members-container">
-      <input 
+      <input  
       #addMemberInput 
       type="text" 
       placeholder="Name"
       (input)="onInput(addMemberInput.value)"
-      [value]="newMemberName" 
+      [value]="newMemberName"
       />
       <div class="center">
         <button (click)=addMember()>Add</button>
@@ -20,7 +20,13 @@
     </div>
 
     <div class="input-container"> 
-      <input type="text" placeholder="# number of teams" />
+      <input 
+      #numberOfTeamsInput
+      type="text" 
+      placeholder="# number of teams" 
+      maxlength="2"
+      (input)="onNumberOfTeamsInput(numberOfTeamsInput.value)"
+      [value]="numberOfTeams" />
       <button>Generate</button>
     </div>
     
