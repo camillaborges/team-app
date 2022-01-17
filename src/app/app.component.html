@@ -37,11 +37,10 @@
   </div>
 
   <div *ngIf="teams.length" class="teams-container">
-    <div class="team-container">
-      <h3>Team 3</h3>
-      <ul>
-        <li>Laith</li>
-      </ul>
-    </div>
+    <app-team *ngFor="let team of teams; let i = index"
+    [team]="team"
+    [index]="i"
+    >
+  </app-team>
   </div>
-</div>
+</div>>
